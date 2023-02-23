@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "886897025535",
+    "project_id": "all-docs-reader-cdfc6",
+    "storage_bucket": "all-docs-reader-cdfc6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886897025535:android:99426eb0c82d7511dfc7ca",
+        "android_client_info": {
+          "package_name": "com.camerascanner.documents.pdf.viewer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886897025535-f56kbr62ofp57q3vlcpt4nf2asidn87j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd8SIglKcj5wMpaK-ODaAHPRPCuAnU-FI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886897025535-f56kbr62ofp57q3vlcpt4nf2asidn87j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

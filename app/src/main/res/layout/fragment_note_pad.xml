@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".notepad.NotePadFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/colorPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_pick_note_color"
+        app:tint="@color/lite_black" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:cursorVisible="true"
+        android:hint="@string/title"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/lite_black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/colorPicker" />
+
+    <TextView
+        android:id="@+id/noteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="-3.3sp"
+        android:text="@string/note"
+        android:imeOptions="actionDone"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toTopOf="@id/saveBtn"
+        app:layout_constraintTop_toBottomOf="@id/noteText">
+
+        <EditText
+            android:id="@+id/notesET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lite_black"
+            android:hint="@string/type_here"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="18.3sp"
+            android:padding="10dp"
+            android:textColor="#313233"
+            android:textColorHint="@color/lite_black"
+            android:textSize="14sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveBtn"
+        android:layout_width="136dp"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/notepad_btn"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

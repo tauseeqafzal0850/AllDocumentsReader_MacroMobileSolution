@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/fileIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_pdf_icon" />
+
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/space_mono_bold"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@+id/fileSize"
+        app:layout_constraintEnd_toStartOf="@+id/fileDelete"
+        app:layout_constraintStart_toEndOf="@id/fileIcon"
+        app:layout_constraintTop_toTopOf="@+id/fileIcon"
+        tools:text="java book" />
+
+
+    <TextView
+        android:id="@+id/fileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/fileIcon"
+        app:layout_constraintStart_toStartOf="@id/fileName"
+        app:layout_constraintTop_toBottomOf="@id/fileName"
+        tools:text="file Size" />
+    <TextView
+        android:id="@+id/filedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_8ssp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/fileIcon"
+        app:layout_constraintStart_toEndOf="@id/fileSize"
+        app:layout_constraintTop_toBottomOf="@id/fileName"
+        tools:text="file Size" />
+
+
+    <ImageView
+        android:id="@+id/fileShare"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_share_icon"/>
+    <ImageView
+        android:id="@+id/fileDelete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fileShare"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_delete"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fileIcon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

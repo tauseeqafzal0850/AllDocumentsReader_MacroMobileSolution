@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/first_con"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/main_top_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/drawerIcon"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:contentDescription="@string/main_icon"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_drawer"
+                app:layout_constraintBottom_toBottomOf="@id/appName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/appName" />
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toTopOf="@+id/guaidfirst"
+                app:layout_constraintStart_toEndOf="@id/drawerIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guaidfirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/allFileCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/rectangle_border"
+            android:backgroundTint="#fff382"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/first_con"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/first_con">
+
+            <TextView
+                android:id="@+id/tvAllFile1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/all_file"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@+id/fileImg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAllFile2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/all_documents_child"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvAllFile1"
+                app:layout_constraintStart_toStartOf="@+id/tvAllFile1"
+                app:layout_constraintTop_toBottomOf="@+id/tvAllFile1" />
+
+            <ImageView
+                android:id="@+id/fileImg"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:contentDescription="@string/main_icon"
+                android:src="@drawable/all_file"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/adLl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/allFileCard">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_6sdp">
+
+
+
+
+                <TextView
+                    android:id="@+id/viewerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="-3.3sp"
+                    android:text="@string/viewer"
+                    android:textColor="#000000"
+                    android:textSize="19.7sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/docu_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewerText">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/pdfCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#ffecec"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@id/wordCard"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/pdfImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:src="@drawable/ic_pdf_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/pdfTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/pdfTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/pdf"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="@+id/pdfCount"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/pdfImg" />
+
+                        <TextView
+                            android:id="@+id/pdfCount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/gray"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/pdfTV"
+                            app:layout_constraintStart_toStartOf="@+id/pdfTV"
+                            app:layout_constraintTop_toBottomOf="@+id/pdfTV"
+                            tools:text="(13)" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/wordCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#ecfaff"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pdfCard"
+                        app:layout_constraintEnd_toStartOf="@id/excelCard"
+                        app:layout_constraintStart_toEndOf="@id/pdfCard"
+                        app:layout_constraintTop_toTopOf="@id/pdfCard">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/wordImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_word_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/wordTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/wordTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/word"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="@+id/wordCount"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/wordImg" />
+
+                        <TextView
+                            android:id="@+id/wordCount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/gray"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/wordTV"
+                            app:layout_constraintStart_toStartOf="@+id/wordTV"
+                            app:layout_constraintTop_toBottomOf="@+id/wordTV"
+                            tools:text="(13)" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/excelCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#ecfff0"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pdfCard"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/wordCard"
+                        app:layout_constraintTop_toTopOf="@id/pdfCard">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/excelImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_excel"
+                            app:layout_constraintBottom_toTopOf="@+id/excelTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/excelTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/excel"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="@+id/excelCount"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/excelImg" />
+
+                        <TextView
+                            android:id="@+id/excelCount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/gray"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/excelTV"
+                            app:layout_constraintStart_toStartOf="@+id/excelTV"
+                            app:layout_constraintTop_toBottomOf="@+id/excelTV"
+                            tools:text="(13)" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/powerPointCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#fff9ec"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textCard"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pdfCard">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/pptImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_ppt"
+                            app:layout_constraintBottom_toTopOf="@+id/pptTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/pptTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/power_point"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="@+id/pptCount"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/pptImg" />
+
+                        <TextView
+                            android:id="@+id/pptCount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/gray"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/pptTV"
+                            app:layout_constraintStart_toStartOf="@+id/pptTV"
+                            app:layout_constraintTop_toBottomOf="@+id/pptTV"
+                            tools:text="(13)" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/textCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#eeecff"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/powerPointCard"
+                        app:layout_constraintEnd_toStartOf="@id/emptyCard"
+                        app:layout_constraintStart_toEndOf="@id/powerPointCard"
+                        app:layout_constraintTop_toTopOf="@+id/powerPointCard">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/textImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_text"
+                            app:layout_constraintBottom_toTopOf="@+id/textTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/textTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/text"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="@+id/textCount"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textImg" />
+
+                        <TextView
+                            android:id="@+id/textCount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/gray"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/textTV"
+                            app:layout_constraintStart_toStartOf="@+id/textTV"
+                            app:layout_constraintTop_toBottomOf="@+id/textTV"
+                            tools:text="(13)" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/emptyCard"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#eeecff"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@id/powerPointCard"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textCard"
+                        app:layout_constraintTop_toTopOf="@+id/powerPointCard" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--Place Native Ad Layout-->
+                <RelativeLayout
+                    android:id="@+id/native_ad_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="visible"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/docu_card"
+                    app:layout_constraintStart_toStartOf="@+id/docu_card"
+                    app:layout_constraintTop_toBottomOf="@+id/docu_card">
+
+                    <RelativeLayout
+                        android:id="@+id/rlAdmobNativeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/loadingCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include layout="@layout/ad_unified_layout" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fl_adPlaceholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlMaxNativeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/fl_MaxAppadPlaceholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <RelativeLayout
+                            android:id="@+id/loadingCardMax"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <include layout="@layout/max_unified_native_ad_view" />
+
+                            <LinearLayout
+                                android:id="@+id/loading_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_marginBottom="@dimen/_1sdp"
+                                android:background="@android:color/white"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingLeft="5dp"
+                                    android:text="Loading Advertisement..."
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+                <!--Place Native Ad Layout-->
+
+
+
+
+
+                <TextView
+                    android:id="@+id/converterText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="-3.3sp"
+                    android:text="@string/converters"
+                    android:textColor="#000000"
+                    android:textSize="19.7sp"
+                    android:textStyle="normal"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/native_ad_container"
+                    app:layout_constraintBottom_toTopOf="@+id/converterCards"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/converterCards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/converterText">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/imgToPdfCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#ecfff0"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textToPdfCard"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgToPdfImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_image_to_pdf_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/imgToPdfTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/imgToPdfTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/image_to_npdf"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imgToPdfImg" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/textToPdfCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#ecfaff"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/excelToPdfCard"
+                        app:layout_constraintStart_toEndOf="@id/imgToPdfCard"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/textToPdfImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_text_to_pdf_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/textToPdfTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/textToPdfTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/text_to_pdf"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textToPdfImg" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/excelToPdfCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#eeecff"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textToPdfCard"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/excelToPdfImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_excel_to_pdf_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/excelToPdfTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/excelToPdfTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/excel_to_pdf"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/excelToPdfImg" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/ImageScannerTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/image_scanner"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/converterCards"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                   />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/scan_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_6sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/othersTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ImageScannerTV">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/scannerCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#f5ffec"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@id/scannerIdCard"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/scanfileImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_document_scanner"
+                            app:layout_constraintBottom_toTopOf="@+id/scanallFileTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/scanallFileTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/documents_scanner"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/scanfileImg" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/scannerIdCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#ecfaff"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/scannerCard"
+                        app:layout_constraintEnd_toStartOf="@id/passportCard"
+                        app:layout_constraintStart_toEndOf="@id/scannerCard"
+                        app:layout_constraintTop_toTopOf="@+id/scannerCard">
+
+
+                        <ImageView
+                            android:id="@+id/scanpdfImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_card"
+                            app:layout_constraintBottom_toTopOf="@+id/scanpdfTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/scanpdfTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/id_card"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/scanpdfImg" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/passportCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#ecfaff"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/scannerCard"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/scannerIdCard"
+                        app:layout_constraintTop_toTopOf="@+id/scannerCard">
+
+
+                        <ImageView
+                            android:id="@+id/scanwordImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_passport"
+                            app:layout_constraintBottom_toTopOf="@+id/scanwordTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/scanwordTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/passportImages"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/scanwordImg" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/qr_code_scannerCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#ecfaff"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@id/qr_code_generatorCard"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/scannerCard">
+
+
+                        <ImageView
+                            android:id="@+id/qr_code_scanfileImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/qr_scanner_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/qr_code_scanallFileTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/qr_code_scanallFileTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/qr_code_scanner"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/qr_code_scanfileImg" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/qr_code_generatorCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#fff9ec"
+                        android:paddingVertical="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/qr_code_scannerCard"
+                        app:layout_constraintEnd_toStartOf="@+id/qr_code_free_main"
+                        app:layout_constraintStart_toEndOf="@id/qr_code_scannerCard"
+                        app:layout_constraintTop_toTopOf="@+id/qr_code_scannerCard">
+
+
+                        <ImageView
+                            android:id="@+id/qr_code_genefileImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/qr_generate_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/qr_code_geneallFileTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/qr_code_geneallFileTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/qr_code_generator"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/qr_code_genefileImg" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/qr_code_free_main"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#ecfaff"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@+id/qr_code_scannerCard"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/qr_code_generatorCard"
+                        app:layout_constraintTop_toTopOf="@+id/qr_code_scannerCard">
+
+
+                        <ImageView
+                            android:id="@+id/qr_code_free"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/qr_code_tv_free"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/qr_code_tv_free"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/qr_code_generator"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/qr_code_free" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/othersTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/Others"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/others_card"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/scan_card" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/others_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/othersTV">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/notepadCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:backgroundTint="#fffbec"
+                        android:paddingVertical="@dimen/_16sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/mergeCard"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/notepadImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_notepad_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/notepadTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/notepadTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/notepad"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/notepadImg" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/mergeCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:paddingVertical="@dimen/_16sdp"
+                        android:backgroundTint="#ecfff0"
+                        app:layout_constraintBottom_toBottomOf="@id/notepadCard"
+                        app:layout_constraintEnd_toStartOf="@+id/emptyDummyCard2"
+                        app:layout_constraintStart_toEndOf="@id/notepadCard"
+                        app:layout_constraintTop_toTopOf="@id/notepadCard">
+
+                        <ImageView
+                            android:id="@+id/mergeImg"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:contentDescription="@string/main_icon"
+                            android:src="@drawable/ic_merge"
+                            app:layout_constraintBottom_toTopOf="@+id/mergeTV"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/mergeTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/pdf_merge"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/mergeImg" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/emptyDummyCard2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rectangle_border"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@id/notepadCard"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/mergeCard"
+                        app:layout_constraintTop_toTopOf="@id/notepadCard">
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+        <include
+            android:id="@+id/adLl"
+            layout="@layout/banner_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

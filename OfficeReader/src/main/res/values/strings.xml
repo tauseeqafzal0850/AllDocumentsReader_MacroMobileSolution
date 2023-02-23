@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">officeReader</string>
+    <string name="sys_url_wxiwei">ss</string>
+    <string name="sys_share_title">Share</string>
+    <string name="sys_name">office</string>
+    <string name="sys_button_ok">OK</string>
+</resources>

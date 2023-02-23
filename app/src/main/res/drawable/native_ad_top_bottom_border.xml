@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Minus (-) how much dp you gave in the stroke width from left right-->
+    <item android:left="-10dp" android:right="-10dp">
+        <shape
+            android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@android:color/holo_red_dark" />
+            <!--This is the main background -->
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+</layer-list>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >-->
+<!--    <item>-->
+<!--        <shape-->
+<!--            android:shape="rectangle">-->
+<!--            <stroke android:width="2dp" android:color="@color/app_blue" />-->
+<!--            <solid android:color="@android:color/transparent" />-->
+
+<!--        </shape>-->
+<!--    </item>-->
+
+<!--    <item android:top="1dp" android:bottom="1dp">-->
+<!--        <shape-->
+<!--            android:shape="rectangle">-->
+<!--            <stroke android:width="3dp" android:color="#FFFFFF" />-->
+<!--            <solid android:color="#FFFFFF" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+<!--</layer-list>-->

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cropButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rectangle_border"
+        android:backgroundTint="@color/purple_700"
+        android:gravity="center"
+        android:minWidth="40dp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_3sdp"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/doneButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rotateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/rectangle_border"
+        android:backgroundTint="@color/purple_700"
+        android:text="@string/rotate"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_3sdp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cropButton"
+        app:layout_constraintEnd_toStartOf="@+id/cropButton"
+        app:layout_constraintTop_toTopOf="@+id/cropButton" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/doneButton"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:gravity="center"
+        android:src="@drawable/ic_baseline_done_24"
+        app:layout_constraintBottom_toBottomOf="@+id/cropButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cropButton"
+        app:tint="@color/white" />
+    <com.theartofdev.edmodo.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btLl"
+        app:layout_constraintTop_toBottomOf="@id/doneButton"
+        custom:cropInitialCropWindowPaddingRatio="0" />
+    <LinearLayout
+        android:id="@+id/btLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/previousImageButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24"
+             />
+        <TextView
+            android:id="@+id/imagecount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:text="@string/showing_image" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/nextimageButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:rotation="180"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24"
+            app:tint="@color/white"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

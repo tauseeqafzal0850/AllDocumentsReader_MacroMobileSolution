@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/selectTextCard"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/select_img_bg"
+        android:elevation="2dp"
+        android:padding="10dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/separate"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/selectTextFile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="@string/select_text_file"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".3"
+            app:layout_constraintStart_toStartOf="@id/separate"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createPdfCard"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:alpha=".4"
+        android:background="@drawable/create_pdf_bg"
+        android:elevation="2dp"
+        android:padding="10dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintTop_toBottomOf="@id/selectTextCard">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/create_pdf"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textMoreOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.04"
+        android:lineSpacingExtra="-8.3sp"
+        android:text="@string/more_options"
+        android:textColor="#030303"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createPdfCard" />
+
+    <View
+        android:layout_width="86dp"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="8dp"
+        android:background="#0695fc"
+        app:layout_constraintBottom_toBottomOf="@id/textMoreOption"
+        app:layout_constraintStart_toStartOf="@id/createPdfCard"
+        app:layout_constraintTop_toTopOf="@id/textMoreOption" />
+
+    <View
+        android:layout_width="86dp"
+        android:layout_height="0.7dp"
+        android:layout_marginEnd="8dp"
+        android:background="#0695fc"
+        app:layout_constraintBottom_toBottomOf="@id/textMoreOption"
+        app:layout_constraintEnd_toEndOf="@id/createPdfCard"
+        app:layout_constraintTop_toTopOf="@id/textMoreOption" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/moreOptionsRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tvFileName"
+        app:layout_constraintTop_toBottomOf="@id/textMoreOption" />
+
+    <TextView
+        android:id="@+id/tvFileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ECA8F8"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/moreOptionsRV" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/laySnackBar"
+        app:layout_constraintBottom_toTopOf="@+id/tvFileName"
+        android:background="@android:color/transparent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

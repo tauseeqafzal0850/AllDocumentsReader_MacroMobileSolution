@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation3"
+    app:startDestination="@+id/FragmentPicker">
+
+ <!--   <fragment
+        android:id="@+id/FragmentPicker"
+        android:name="com.scanlibrary.library.PickImageFragment"
+        android:label="@string/title_image_picker"
+        tools:layout="@layout/pick_image_fragment">
+        <argument
+            android:name="preferenceInt"
+            app:argType="integer"
+            android:defaultValue="111"
+            />
+        <action
+            android:id="@+id/action_Scann_Image"
+            app:destination="@id/ScanFragment">
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ScanFragment"
+        android:name="com.scanlibrary.library.ScanFragment"
+        tools:layout="@layout/scan_fragment_layout_new">
+        <argument
+            android:name="imageUriData"
+            app:argType="com.scanlibrary.navigationcomponent.ui.ImageUriSelection" />
+        <action
+            android:id="@+id/action_scan_result"
+            app:destination="@id/ResultScanFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ResultScanFragment"
+        android:name="com.scanlibrary.library.ResultFragment"
+        android:label="@string/title_Scanner_result"
+        tools:layout="@layout/result_layout_new">
+
+        <argument
+            android:name="imageUriScann"
+            app:argType="com.scanlibrary.navigationcomponent.ui.ImageUriScan" />
+   &lt;!&ndash;     <action
+            android:id="@+id/action_navigation_scannresult_to_navigation_picker"
+            app:destination="@id/FragmentPicker" />&ndash;&gt;
+        <action
+            android:id="@+id/action_back_navigation_scan"
+            app:destination="@id/ScanFragment" />
+    </fragment>-->
+</navigation>

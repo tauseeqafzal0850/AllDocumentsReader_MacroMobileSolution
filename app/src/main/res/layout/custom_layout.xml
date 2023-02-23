@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="190dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="@dimen/_25sdp"
+        android:fontFamily="@font/space_mono_bold"
+        android:text="Sort by"
+        android:layout_margin="@dimen/_5sdp"
+        android:textColor="@color/lite_black"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@id/tvHeading"
+        app:layout_constraintTop_toBottomOf="@id/tvHeading"
+        android:textColor="@color/lite_black"
+        android:textSize="@dimen/_8ssp"
+        android:text="@string/name"
+        android:id="@+id/byName"
+        android:paddingVertical="@dimen/_7sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:drawableStart="@drawable/dot_circle"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/_20sdp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/byNameRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ic_baseline_abc_24"
+        android:tint="@color/lite_black"
+        app:layout_constraintBottom_toBottomOf="@id/byName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/byName" />
+    <View
+        android:id="@+id/view1"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@id/byNameRadio"
+        app:layout_constraintStart_toStartOf="@id/byName"
+        app:layout_constraintTop_toBottomOf="@id/byName" />
+
+    <TextView
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintStart_toStartOf="@id/tvHeading"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        android:textColor="@color/lite_black"
+        android:textSize="@dimen/_8ssp"
+        android:paddingVertical="@dimen/_7sdp"
+        android:text="@string/size"
+        android:id="@+id/bySize"
+        android:drawablePadding="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:drawableStart="@drawable/dot_circle"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/_20sdp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sortSizeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ic_baseline_sd_storage_24"
+        android:tint="@color/lite_black"
+        app:layout_constraintBottom_toBottomOf="@id/bySize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bySize" />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@id/sortSizeIcon"
+        app:layout_constraintStart_toStartOf="@id/bySize"
+        app:layout_constraintTop_toBottomOf="@id/bySize" />
+
+
+    <TextView
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintStart_toStartOf="@id/tvHeading"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        android:textColor="@color/lite_black"
+        android:textSize="@dimen/_8ssp"
+        android:paddingVertical="@dimen/_7sdp"
+        android:text="@string/date"
+        android:id="@+id/byDate"
+        android:drawablePadding="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:drawableStart="@drawable/dot_circle"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/_20sdp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sortDateIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ic_baseline_calendar_today_24"
+        android:tint="@color/lite_black"
+        app:layout_constraintBottom_toBottomOf="@id/byDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/byDate" />
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@id/sortDateIcon"
+        app:layout_constraintStart_toStartOf="@id/byDate"
+        app:layout_constraintTop_toBottomOf="@id/byDate" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+    <RelativeLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dialog_bg"
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:maxHeight="@dimen/_60sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ratting_lottie" />
+
+        <TextView
+            android:id="@+id/tvHeading"
+            style="@style/dialogTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lottie"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/rate_us_if_you_like_this_app"
+            android:textColor="@color/black" />
+
+        <TextView
+            style="@style/dialogTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHeading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/do_you_really_want_to_exit_app"
+            android:textColor="@color/subTextColor"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/top_view"
+        app:layout_constraintTop_toBottomOf="@id/top_view"
+        android:background="@android:color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btnRateus"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:text="@string/rate_us"
+            android:textAppearance="@style/regularTextStyle"
+            android:textStyle="bold"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:backgroundTint="@color/color_card"
+            app:cornerRadius="@dimen/_3sdp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnExit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:text="@string/exit"
+            android:textAppearance="@style/regularTextStyle"
+            android:textStyle="bold"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:backgroundTint="@color/subTextColor"
+            app:cornerRadius="@dimen/_3sdp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

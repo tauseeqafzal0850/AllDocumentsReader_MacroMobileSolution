@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkBlue">#184DB7</color>
+    <color name="purple_700">#266EDA</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="lite_black">#555555</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lite_white">#DDDDDD</color>
+    <color name="red">#FF0000</color>
+    <color name="app_dark">#414141</color>
+    <color name="gray">#707070</color>
+    <color name="subTextColor">#606e77</color>
+    <color name="pdf_bg">#ffe5e5</color>
+    <color name="word_bg">#e5f4ff</color>
+    <color name="excel_bg">#e5ffec</color>
+    <color name="ppt_bg">#fff5e5</color>
+    <color name="text_bg">#f4e5ff</color>
+    <color name="all_bg">#fff5e5</color>
+
+    <color name="app_blue">#0696FC</color>
+    <color name="app_blue_dark">#0670FC</color>
+    <color name="app_splash_blue">#266ed9</color>
+    <color name="ad_color">#90a4ae</color>
+
+    <color name="orange">#ffff900d</color>
+    <color name="gray_btn">#d1d8de</color>
+    <color name="gray_btn_tv">#243d50</color>
+    <color name="colorBlackDark">#1F1F1F</color>
+    <color name="colorGrayText">#919191</color>
+    <color name="colorPurpleRect">#6179f5</color>
+    <color name="lightPink">#ecefff</color>
+    <color name="color_card">#0696FC</color>
+
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/each_file_img"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/each_pageno"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@id/each_file_screenshot"
+            android:background="@color/purple_700"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Page XXX" />
+
+        <ImageView
+            android:id="@+id/each_file_screenshot"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/each_pageno"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/each_file_delete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/delete_bg"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_delete_forever_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+
